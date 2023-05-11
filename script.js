@@ -2,7 +2,9 @@ const container= document.getElementById("container");
 console.log(container);
 
 let numeri;
-let numeriInPagina = document.querySelector("numeriInPagina");
+let numeriInPagina = document.querySelector(".numeri");
+let inputContainer= document.querySelector(".input-container");
+const invia= document.getElementById("invia");
 
 for(let i= 0; i < 5; i++){
     numeri= Math.floor(Math.random()*100);
@@ -11,9 +13,21 @@ for(let i= 0; i < 5; i++){
     container.innerHTML += numeriInPagina;
 }
 
-setTimeout (myfunction, 2000);
+setTimeout (myfunction, 3000);
 
 function myfunction(){
-    numeriInPagina.classList.add(".none");
 
+    container.classList.add("none");
+
+    for(let i= 0; i < 5; i++){
+        let inputType =`<input type="number" placeholder="Enter a number"/>`;
+        inputContainer.innerHTML += inputType;
+        inputContainer.classList.add("active");
+    }    
+    
+}
+
+invia.addEventListener('click', calcola)
+
+function calcola(){
 }

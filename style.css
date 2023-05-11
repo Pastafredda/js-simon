@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    margin: 30px;
+}
+
 .none{
     display: none;
+}
+
+.input-container{
+   display: none;
+
+}
+
+.active{
+    display: block;
+}
+
+input{
+    margin: 20px;
+    padding: 8px;
 }
